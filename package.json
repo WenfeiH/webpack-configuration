@@ -1,0 +1,49 @@
+{
+  "name": "web-react",
+  "version": "1.0.0",
+  "description": "node and webpack use react",
+  "main": "index.js",
+  "scripts": {
+    "client": "webpack-dev-server --open",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "compile": "webpack",
+    "server": "nodemon ./server/index.js --exec babel-node",
+    "start": "concurrently \"npm run compile\" \"npm run server\""
+  },
+  "keywords": [
+    "node",
+    "webpack",
+    "react"
+  ],
+  "author": "Fay Han",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "css-loader": "^0.28.5",
+    "ejs": "^2.5.7",
+    "express": "~4.15.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.9",
+    "morgan": "~1.8.1",
+    "nodemon": "^1.18.7",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^4.1.0",
+    "mockjs": "^1.0.1-beta3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
